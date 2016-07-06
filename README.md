@@ -7,5 +7,5 @@ my first cv project (and my first project)
 
 实现功能1：
     在控制台画板（opencv实现）上用鼠标进行书写并识别（支持多数字识别）
-    
-    
+    ![image](https://github.com/wkroach/handWritten-digit-recognition-based-on-OpenCV/blob/master/resources/showImage.jpg)
+
