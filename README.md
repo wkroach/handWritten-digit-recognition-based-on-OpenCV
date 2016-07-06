@@ -1,5 +1,6 @@
 # handWritten-digit-recognition-based-on-OpenCV
-my first cv project (and my first project)
+我的第一个项目，原本是软件工程课程设计
+还有许多不足需要改进orz
 
 基于OpenCV3.1的简单的手写数字（MNIST库）识别系统
 
