@@ -3,8 +3,9 @@
 int main()
 {
 	//训练SVM
-	//mySVM svmOnHand(10000, 1000, 1000, getMixedFeature, Size(28, 28));
-	//svmOnHand.trainTestSVM(g_SVMtemp);
+	//mySVM svmOnHand(60000, 10000, 60000, getMixedFeature, Size(28, 28));
+	//svmOnHand.testSVM(g_SVM);
+	//getchar();
 
 	cout << "手写数字识别 版本1.0" << endl;
 	int flag = 0;
@@ -20,6 +21,8 @@ int main()
 			imageRecognize();
 		}
 	}
+
+
 	return 0;
 }
 

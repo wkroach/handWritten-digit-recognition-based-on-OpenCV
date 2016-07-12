@@ -12,6 +12,7 @@ using namespace cv::ml;
 
 #include"features.h"
 #include"loadMNIST.h"
+#include"global.h"
 
 class mySVM
 {
@@ -46,7 +47,7 @@ public:
 
 	float testSVM(Mat& testingDataMat, vector<int>& testingLabelVec);
 
-	void testSVM();
+	void testSVM(const string& fileName);
 
 	void trainTestSVM(const string& fileName);
 };

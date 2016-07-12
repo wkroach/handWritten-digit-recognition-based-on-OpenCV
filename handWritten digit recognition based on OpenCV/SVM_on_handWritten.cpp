@@ -78,8 +78,13 @@ float mySVM::testSVM(Mat& testingDataMat, vector<int>& testingLabelVec)
 	return (error / (float)sum);
 }
 
-void mySVM::testSVM()
+void mySVM::testSVM(const string& fileName)
 {
+	if (!svm->isTrained())
+	{
+		cout << 1 << endl;
+		getSVM(fileName);
+	}
 	float trainTestErrorRate = testSVM(trainTestDataMat, trainTestLabelVec);
 	float testErrorRate = testSVM(testDataMat, testLabelVec);
 	cout << "trainTest error rate:" << trainTestErrorRate << endl;
@@ -92,7 +97,7 @@ void mySVM::trainTestSVM(const string& fileName)
 	trainSVM(fileName);
 	printf("\r");
 	showSVMInfo();
-	testSVM();
+	testSVM(fileName);
 }
 
 mySVM::mySVM(int trainNumber, int testNumber, int trainTestNumber, getSVMfeature fun, Size size)

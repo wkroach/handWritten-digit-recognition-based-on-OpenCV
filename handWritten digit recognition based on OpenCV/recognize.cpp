@@ -74,7 +74,7 @@ void imageRecognize()
 	arr.clear();
 	getSegment(dstImage, arr, srcImage);
 	namedWindow(WINDOW_NAME);
-	resizeImage(srcImage, Size(1000, 600));
+	resizeImage(srcImage, Size(800, 600));
 	imshow(WINDOW_NAME, srcImage);
 
 	Mat imageDataMat;
