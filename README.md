@@ -16,5 +16,15 @@
     ![image](https://github.com/wkroach/handWritten-digit-recognition-based-on-OpenCV/blob/master/resources/showImage.jpg)
 
 实现功能2：
-    图片中的手写数字识别，（由于实现效果不好，就不贴了，之后会改进）
+    图片中的手写数字识别（OCR），对于有污点的图像识别效果仍然不好，OCR什么的好难。。。
+    原图：
+     ![image](https://github.com/wkroach/handWritten-digit-recognition-based-on-OpenCV/blob/master/resources/sorceImage.jpg)
+     处理后：
+      ![image](https://github.com/wkroach/handWritten-digit-recognition-based-on-OpenCV/blob/master/resources/proccessedImage.jpg)
+      不管怎么滤波都去不了噪点。。。蒙版选大了又会对原图造成影响。。。。orz
+      ![image](https://github.com/wkroach/handWritten-digit-recognition-based-on-OpenCV/blob/master/resources/resultImage.jpg)
+      ![image](https://github.com/wkroach/handWritten-digit-recognition-based-on-OpenCV/blob/master/resources/answer.jpg)
+      识别时还有一定误差。。。。
+
+还需要加油啊！！！
 
