@@ -7,29 +7,29 @@ void preProcess(const Mat& srcImage, Mat& dstImage)
 	{
 		cvtColor(tmpImage, tmpImage, CV_BGR2GRAY);
 	}
-	//高斯滤波预处理噪点
-	GaussianBlur(tmpImage, tmpImage, Size(3, 3), 0, 0, BORDER_DEFAULT);
+	//中值滤波预处理噪点
+	//GaussianBlur(tmpImage, tmpImage, Size(3, 3), 0, 0, BORDER_DEFAULT);
+	medianBlur(tmpImage, tmpImage, 3);
 	//形态学滤波 开运算预处理
 	Mat element = getStructuringElement(MORPH_RECT, Size(7,7));
-	morphologyEx(tmpImage, tmpImage, MORPH_OPEN, element);
+	//morphologyEx(tmpImage, tmpImage, MORPH_OPEN, element);
 
-	//imshow("fff", tmpImage);
+	//imshow("高斯滤波加开运算", tmpImage);
 	//waitKey(500);
 	
 	//canny提取边沿
 	Canny(tmpImage, dstImage, 75, 100, 3);
-	//imshow("qq", dstImage);
+	//imshow("canny边沿提取", dstImage);
 	//waitKey(500);
+
 	//形态学滤波，闭运算终处理
-	Mat tmpImage4 = dstImage.clone();
-	element = getStructuringElement(MORPH_RECT, Size(10, 10));
-	morphologyEx(dstImage, tmpImage4, MORPH_DILATE, element);
-
-	//imshow("hhh", tmpImage4);
+	element = getStructuringElement(MORPH_RECT, Size(3, 3));
+	morphologyEx(dstImage, dstImage, MORPH_DILATE, element);
+	//imshow("形态学处理", tmpImage4);
 	//waitKey(500);
 
-	threshold(tmpImage4, dstImage, 0, 255, THRESH_OTSU + THRESH_BINARY);
-
-	//imshow("hhh2", dstImage);
-	//waitKey(0);
+	//中值滤波，处理噪点
+	//medianBlur(tmpImage4, dstImage, 3);
+	//imshow("中值滤波后", dstImage);
+	//waitKey(500);
 }

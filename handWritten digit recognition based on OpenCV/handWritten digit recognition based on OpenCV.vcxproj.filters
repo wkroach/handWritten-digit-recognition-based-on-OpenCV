@@ -84,5 +84,11 @@
     <Image Include="testImage.jpg">
       <Filter>资源文件</Filter>
     </Image>
+    <Image Include="testImage2.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="testImage3.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
   </ItemGroup>
 </Project>

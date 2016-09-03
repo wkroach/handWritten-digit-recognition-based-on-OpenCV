@@ -63,18 +63,19 @@ void imageRecognize()
 	} while (srcImage.empty());
 
 	srcImage = imread(fileName);
+	resize(srcImage, srcImage, Size(1024, 768), 0, 0, INTER_AREA);
 	Mat dstImage = srcImage.clone();
-	//imshow("原图", srcImage);
-	//waitKey();
+	imshow("原图", srcImage);
+	waitKey();
 	preProcess(srcImage, dstImage);
-	//imshow("处理后", dstImage);
-	//waitKey(0);
+	imshow("处理后", dstImage);
+	waitKey(0);
 
 	vector<Mat> arr;
 	arr.clear();
 	getSegment(dstImage, arr, srcImage);
 	namedWindow(WINDOW_NAME);
-	resizeImage(srcImage, Size(800, 600));
+	//resizeImage(srcImage, Size(800, 600));
 	imshow(WINDOW_NAME, srcImage);
 
 	Mat imageDataMat;

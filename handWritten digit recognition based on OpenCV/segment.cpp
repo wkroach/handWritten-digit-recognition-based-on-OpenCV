@@ -46,7 +46,10 @@ void getSegment(const Mat& srcImage, vector<Mat>& arr, Mat& showImage)
 	for (int i = 0; i < contours.size(); ++i)
 	{
 		Rect rec = boundingRect(contours[i]);//外接矩形
-		rectArr.push_back(rec);
+		if (rec.area() >= 8 * 8)
+		{
+			rectArr.push_back(rec);
+		}
 	}
 
 	sortRect(rectArr);//对矩形按阅读方式进行排序

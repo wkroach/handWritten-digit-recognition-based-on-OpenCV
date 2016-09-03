@@ -180,6 +180,8 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="testImage.jpg" />
+    <Image Include="testImage2.jpg" />
+    <Image Include="testImage3.jpg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
